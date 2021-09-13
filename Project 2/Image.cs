@@ -11,14 +11,16 @@ namespace Project_2
     {
         public decimal Width { get; set; }
         public decimal Height { get; set; }
-        public string Resolution { get; set; }
+        public string HRes { get; set; }
+        public string VRes { get; set; }
 
         public Image() : base()
         {
             //  Default values declared as empty string and 0
             Width = 0;
             Height = 0;
-            Resolution = "";
+            HRes = "";
+            VRes = "";
         }
     }
 }
