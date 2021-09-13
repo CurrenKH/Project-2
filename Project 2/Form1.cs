@@ -16,7 +16,10 @@ namespace Project_2
         {
             InitializeComponent();
             // Test for git
-           
+            double x = 4;
+            double y = 3;
+            double answer;
+            answer = x * y;
         }
 
         public int Numbers { get; set; }
