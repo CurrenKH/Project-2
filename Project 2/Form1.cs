@@ -16,6 +16,9 @@ namespace Project_2
         {
             InitializeComponent();
             // Test for git
+           
         }
+
+        public int Numbers { get; set; }
     }
 }
