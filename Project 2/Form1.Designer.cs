@@ -39,7 +39,7 @@ namespace Project_2
             this.imgHRes = new System.Windows.Forms.TextBox();
             this.imgHeight = new System.Windows.Forms.TextBox();
             this.imgWidth = new System.Windows.Forms.TextBox();
-            this.searchButton = new System.Windows.Forms.Button();
+            this.fileSearchButton = new System.Windows.Forms.Button();
             this.numberOfMediaTextBox = new System.Windows.Forms.TextBox();
             this.numberOfVideoTextBox = new System.Windows.Forms.TextBox();
             this.numberOfAudioTextBox = new System.Windows.Forms.TextBox();
@@ -55,10 +55,10 @@ namespace Project_2
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.adressBar = new System.Windows.Forms.TextBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.fileListBox = new System.Windows.Forms.ListBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.nameAndExt = new System.Windows.Forms.TextBox();
+            this.nametTextBox = new System.Windows.Forms.TextBox();
             this.docSubject = new System.Windows.Forms.TextBox();
             this.numOfWords = new System.Windows.Forms.TextBox();
             this.numOfPages = new System.Windows.Forms.TextBox();
@@ -98,6 +98,9 @@ namespace Project_2
             this.label40 = new System.Windows.Forms.Label();
             this.label41 = new System.Windows.Forms.Label();
             this.label42 = new System.Windows.Forms.Label();
+            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.label1 = new System.Windows.Forms.Label();
+            this.extTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // exportFilesButton
@@ -165,7 +168,7 @@ namespace Project_2
             // 
             // imgVRes
             // 
-            this.imgVRes.Location = new System.Drawing.Point(594, 457);
+            this.imgVRes.Location = new System.Drawing.Point(593, 487);
             this.imgVRes.Margin = new System.Windows.Forms.Padding(4);
             this.imgVRes.Name = "imgVRes";
             this.imgVRes.Size = new System.Drawing.Size(181, 22);
@@ -173,7 +176,7 @@ namespace Project_2
             // 
             // imgHRes
             // 
-            this.imgHRes.Location = new System.Drawing.Point(594, 425);
+            this.imgHRes.Location = new System.Drawing.Point(593, 455);
             this.imgHRes.Margin = new System.Windows.Forms.Padding(4);
             this.imgHRes.Name = "imgHRes";
             this.imgHRes.Size = new System.Drawing.Size(181, 22);
@@ -181,7 +184,7 @@ namespace Project_2
             // 
             // imgHeight
             // 
-            this.imgHeight.Location = new System.Drawing.Point(594, 395);
+            this.imgHeight.Location = new System.Drawing.Point(593, 425);
             this.imgHeight.Margin = new System.Windows.Forms.Padding(4);
             this.imgHeight.Name = "imgHeight";
             this.imgHeight.Size = new System.Drawing.Size(181, 22);
@@ -189,21 +192,22 @@ namespace Project_2
             // 
             // imgWidth
             // 
-            this.imgWidth.Location = new System.Drawing.Point(594, 365);
+            this.imgWidth.Location = new System.Drawing.Point(593, 395);
             this.imgWidth.Margin = new System.Windows.Forms.Padding(4);
             this.imgWidth.Name = "imgWidth";
             this.imgWidth.Size = new System.Drawing.Size(181, 22);
             this.imgWidth.TabIndex = 54;
             // 
-            // searchButton
+            // fileSearchButton
             // 
-            this.searchButton.Location = new System.Drawing.Point(799, 8);
-            this.searchButton.Margin = new System.Windows.Forms.Padding(4);
-            this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(76, 33);
-            this.searchButton.TabIndex = 53;
-            this.searchButton.Text = "Search";
-            this.searchButton.UseVisualStyleBackColor = true;
+            this.fileSearchButton.Location = new System.Drawing.Point(799, 8);
+            this.fileSearchButton.Margin = new System.Windows.Forms.Padding(4);
+            this.fileSearchButton.Name = "fileSearchButton";
+            this.fileSearchButton.Size = new System.Drawing.Size(126, 33);
+            this.fileSearchButton.TabIndex = 53;
+            this.fileSearchButton.Text = "Search Files";
+            this.fileSearchButton.UseVisualStyleBackColor = true;
+            this.fileSearchButton.Click += new System.EventHandler(this.fileSearchButton_Click);
             // 
             // numberOfMediaTextBox
             // 
@@ -341,16 +345,16 @@ namespace Project_2
             this.adressBar.Size = new System.Drawing.Size(701, 22);
             this.adressBar.TabIndex = 33;
             // 
-            // listBox1
+            // fileListBox
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(132, 46);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.ScrollAlwaysVisible = true;
-            this.listBox1.Size = new System.Drawing.Size(344, 564);
-            this.listBox1.TabIndex = 65;
+            this.fileListBox.FormattingEnabled = true;
+            this.fileListBox.ItemHeight = 16;
+            this.fileListBox.Location = new System.Drawing.Point(132, 46);
+            this.fileListBox.Margin = new System.Windows.Forms.Padding(4);
+            this.fileListBox.Name = "fileListBox";
+            this.fileListBox.ScrollAlwaysVisible = true;
+            this.fileListBox.Size = new System.Drawing.Size(344, 564);
+            this.fileListBox.TabIndex = 65;
             // 
             // textBox1
             // 
@@ -370,17 +374,17 @@ namespace Project_2
             this.label14.TabIndex = 66;
             this.label14.Text = "OTHER:";
             // 
-            // nameAndExt
+            // nametTextBox
             // 
-            this.nameAndExt.Location = new System.Drawing.Point(594, 72);
-            this.nameAndExt.Margin = new System.Windows.Forms.Padding(4);
-            this.nameAndExt.Name = "nameAndExt";
-            this.nameAndExt.Size = new System.Drawing.Size(181, 22);
-            this.nameAndExt.TabIndex = 68;
+            this.nametTextBox.Location = new System.Drawing.Point(593, 70);
+            this.nametTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.nametTextBox.Name = "nametTextBox";
+            this.nametTextBox.Size = new System.Drawing.Size(181, 22);
+            this.nametTextBox.TabIndex = 68;
             // 
             // docSubject
             // 
-            this.docSubject.Location = new System.Drawing.Point(594, 305);
+            this.docSubject.Location = new System.Drawing.Point(593, 335);
             this.docSubject.Margin = new System.Windows.Forms.Padding(4);
             this.docSubject.Name = "docSubject";
             this.docSubject.Size = new System.Drawing.Size(181, 22);
@@ -388,7 +392,7 @@ namespace Project_2
             // 
             // numOfWords
             // 
-            this.numOfWords.Location = new System.Drawing.Point(594, 275);
+            this.numOfWords.Location = new System.Drawing.Point(593, 305);
             this.numOfWords.Margin = new System.Windows.Forms.Padding(4);
             this.numOfWords.Name = "numOfWords";
             this.numOfWords.Size = new System.Drawing.Size(181, 22);
@@ -396,7 +400,7 @@ namespace Project_2
             // 
             // numOfPages
             // 
-            this.numOfPages.Location = new System.Drawing.Point(594, 245);
+            this.numOfPages.Location = new System.Drawing.Point(593, 275);
             this.numOfPages.Margin = new System.Windows.Forms.Padding(4);
             this.numOfPages.Name = "numOfPages";
             this.numOfPages.Size = new System.Drawing.Size(181, 22);
@@ -405,12 +409,12 @@ namespace Project_2
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(492, 75);
+            this.label16.Location = new System.Drawing.Point(542, 73);
             this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(100, 17);
+            this.label16.Size = new System.Drawing.Size(49, 17);
             this.label16.TabIndex = 70;
-            this.label16.Text = "Name and Ext:";
+            this.label16.Text = "Name:";
             // 
             // label17
             // 
@@ -438,7 +442,7 @@ namespace Project_2
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(547, 492);
+            this.label22.Location = new System.Drawing.Point(546, 522);
             this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(59, 20);
@@ -460,7 +464,7 @@ namespace Project_2
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(547, 221);
+            this.label24.Location = new System.Drawing.Point(546, 251);
             this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(45, 20);
@@ -469,7 +473,7 @@ namespace Project_2
             // 
             // modDate
             // 
-            this.modDate.Location = new System.Drawing.Point(594, 162);
+            this.modDate.Location = new System.Drawing.Point(593, 192);
             this.modDate.Margin = new System.Windows.Forms.Padding(4);
             this.modDate.Name = "modDate";
             this.modDate.Size = new System.Drawing.Size(181, 22);
@@ -477,7 +481,7 @@ namespace Project_2
             // 
             // creationDate
             // 
-            this.creationDate.Location = new System.Drawing.Point(594, 132);
+            this.creationDate.Location = new System.Drawing.Point(593, 162);
             this.creationDate.Margin = new System.Windows.Forms.Padding(4);
             this.creationDate.Name = "creationDate";
             this.creationDate.Size = new System.Drawing.Size(181, 22);
@@ -485,7 +489,7 @@ namespace Project_2
             // 
             // fileSize
             // 
-            this.fileSize.Location = new System.Drawing.Point(594, 102);
+            this.fileSize.Location = new System.Drawing.Point(593, 132);
             this.fileSize.Margin = new System.Windows.Forms.Padding(4);
             this.fileSize.Name = "fileSize";
             this.fileSize.Size = new System.Drawing.Size(181, 22);
@@ -493,7 +497,7 @@ namespace Project_2
             // 
             // userComment
             // 
-            this.userComment.Location = new System.Drawing.Point(594, 192);
+            this.userComment.Location = new System.Drawing.Point(593, 222);
             this.userComment.Margin = new System.Windows.Forms.Padding(4);
             this.userComment.Name = "userComment";
             this.userComment.Size = new System.Drawing.Size(181, 22);
@@ -503,7 +507,7 @@ namespace Project_2
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(547, 341);
+            this.label21.Location = new System.Drawing.Point(546, 371);
             this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(68, 20);
@@ -512,7 +516,7 @@ namespace Project_2
             // 
             // mediaRating
             // 
-            this.mediaRating.Location = new System.Drawing.Point(594, 578);
+            this.mediaRating.Location = new System.Drawing.Point(593, 608);
             this.mediaRating.Margin = new System.Windows.Forms.Padding(4);
             this.mediaRating.Name = "mediaRating";
             this.mediaRating.Size = new System.Drawing.Size(181, 22);
@@ -520,7 +524,7 @@ namespace Project_2
             // 
             // mediaLength
             // 
-            this.mediaLength.Location = new System.Drawing.Point(594, 546);
+            this.mediaLength.Location = new System.Drawing.Point(593, 576);
             this.mediaLength.Margin = new System.Windows.Forms.Padding(4);
             this.mediaLength.Name = "mediaLength";
             this.mediaLength.Size = new System.Drawing.Size(181, 22);
@@ -528,7 +532,7 @@ namespace Project_2
             // 
             // mediaTitle
             // 
-            this.mediaTitle.Location = new System.Drawing.Point(594, 516);
+            this.mediaTitle.Location = new System.Drawing.Point(593, 546);
             this.mediaTitle.Margin = new System.Windows.Forms.Padding(4);
             this.mediaTitle.Name = "mediaTitle";
             this.mediaTitle.Size = new System.Drawing.Size(181, 22);
@@ -569,7 +573,7 @@ namespace Project_2
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(527, 105);
+            this.label25.Location = new System.Drawing.Point(526, 135);
             this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(65, 17);
@@ -579,7 +583,7 @@ namespace Project_2
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(493, 135);
+            this.label26.Location = new System.Drawing.Point(492, 165);
             this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(99, 17);
@@ -589,7 +593,7 @@ namespace Project_2
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(519, 165);
+            this.label27.Location = new System.Drawing.Point(518, 195);
             this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(73, 17);
@@ -599,7 +603,7 @@ namespace Project_2
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(519, 195);
+            this.label28.Location = new System.Drawing.Point(518, 225);
             this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(71, 17);
@@ -609,7 +613,7 @@ namespace Project_2
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(506, 248);
+            this.label29.Location = new System.Drawing.Point(505, 278);
             this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(80, 17);
@@ -619,7 +623,7 @@ namespace Project_2
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(505, 278);
+            this.label30.Location = new System.Drawing.Point(504, 308);
             this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(81, 17);
@@ -629,7 +633,7 @@ namespace Project_2
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(527, 305);
+            this.label31.Location = new System.Drawing.Point(526, 335);
             this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(59, 17);
@@ -639,7 +643,7 @@ namespace Project_2
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(544, 368);
+            this.label32.Location = new System.Drawing.Point(543, 398);
             this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(48, 17);
@@ -649,7 +653,7 @@ namespace Project_2
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(539, 398);
+            this.label33.Location = new System.Drawing.Point(538, 428);
             this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(53, 17);
@@ -659,7 +663,7 @@ namespace Project_2
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(542, 460);
+            this.label34.Location = new System.Drawing.Point(541, 490);
             this.label34.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(50, 17);
@@ -669,7 +673,7 @@ namespace Project_2
             // label35
             // 
             this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(541, 428);
+            this.label35.Location = new System.Drawing.Point(540, 458);
             this.label35.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(51, 17);
@@ -679,7 +683,7 @@ namespace Project_2
             // label36
             // 
             this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(553, 519);
+            this.label36.Location = new System.Drawing.Point(552, 549);
             this.label36.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(39, 17);
@@ -689,7 +693,7 @@ namespace Project_2
             // label37
             // 
             this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(536, 549);
+            this.label37.Location = new System.Drawing.Point(535, 579);
             this.label37.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(56, 17);
@@ -699,7 +703,7 @@ namespace Project_2
             // label38
             // 
             this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(541, 581);
+            this.label38.Location = new System.Drawing.Point(540, 611);
             this.label38.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(53, 17);
@@ -719,7 +723,7 @@ namespace Project_2
             // label40
             // 
             this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(788, 105);
+            this.label40.Location = new System.Drawing.Point(784, 105);
             this.label40.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(70, 17);
@@ -746,11 +750,31 @@ namespace Project_2
             this.label42.TabIndex = 113;
             this.label42.Text = "Bitrate:";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(554, 105);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(31, 17);
+            this.label1.TabIndex = 115;
+            this.label1.Text = "Ext:";
+            // 
+            // extTextBox
+            // 
+            this.extTextBox.Location = new System.Drawing.Point(593, 102);
+            this.extTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.extTextBox.Name = "extTextBox";
+            this.extTextBox.Size = new System.Drawing.Size(181, 22);
+            this.extTextBox.TabIndex = 114;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1102, 617);
+            this.ClientSize = new System.Drawing.Size(1102, 645);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.extTextBox);
             this.Controls.Add(this.label42);
             this.Controls.Add(this.label41);
             this.Controls.Add(this.label40);
@@ -790,10 +814,10 @@ namespace Project_2
             this.Controls.Add(this.numOfPages);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.nameAndExt);
+            this.Controls.Add(this.nametTextBox);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.fileListBox);
             this.Controls.Add(this.exportFilesButton);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.typeSortButton);
@@ -804,7 +828,7 @@ namespace Project_2
             this.Controls.Add(this.imgHRes);
             this.Controls.Add(this.imgHeight);
             this.Controls.Add(this.imgWidth);
-            this.Controls.Add(this.searchButton);
+            this.Controls.Add(this.fileSearchButton);
             this.Controls.Add(this.numberOfMediaTextBox);
             this.Controls.Add(this.numberOfVideoTextBox);
             this.Controls.Add(this.numberOfAudioTextBox);
@@ -839,7 +863,7 @@ namespace Project_2
         private System.Windows.Forms.TextBox imgHRes;
         private System.Windows.Forms.TextBox imgHeight;
         private System.Windows.Forms.TextBox imgWidth;
-        private System.Windows.Forms.Button searchButton;
+        private System.Windows.Forms.Button fileSearchButton;
         private System.Windows.Forms.TextBox numberOfMediaTextBox;
         private System.Windows.Forms.TextBox numberOfVideoTextBox;
         private System.Windows.Forms.TextBox numberOfAudioTextBox;
@@ -855,10 +879,10 @@ namespace Project_2
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox adressBar;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox fileListBox;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox nameAndExt;
+        private System.Windows.Forms.TextBox nametTextBox;
         private System.Windows.Forms.TextBox docSubject;
         private System.Windows.Forms.TextBox numOfWords;
         private System.Windows.Forms.TextBox numOfPages;
@@ -898,6 +922,9 @@ namespace Project_2
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox extTextBox;
     }
 }
 

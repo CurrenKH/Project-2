@@ -9,6 +9,9 @@ namespace Project_2
     //  Derived class to parent class
     class Audio : MediaFile
     {
+        /// <summary>
+        /// This is the media class
+        /// </summary>
         public string Artist { get; set; }
         public int BitRate { get; set; }
         public Audio() : base()

@@ -10,13 +10,12 @@ namespace Project_2
     class MediaFile : GenericFile
     {
         public string Title { get; set; }
-        public double Length { get; set; }
+        public TimeSpan Length { get; set; }
         public int Rating { get; set; }
         public MediaFile() : base()
         {
             //  Default values declared as empty string and 0
             Title = "";
-            Length = 0;
             Rating = 0;
         }
     }

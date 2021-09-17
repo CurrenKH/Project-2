@@ -9,19 +9,21 @@ namespace Project_2
     class GenericFile
     {
         public string Name { get; set; }
+        public string Extension { get; set; }
         public string UserComment { get; set; }
-        public string Size { get; set; }
-        public DateTime LastModified { get; set; }
-        public DateTime CreationDate { get; set; }
+        public int Size { get; set; }
+        public string LastModified { get; set; }
+        public string CreationDate { get; set; }
 
         public GenericFile()
         {
             //  Default values declared as empty strings
             Name = "";
+            Extension = "";
             UserComment = "";
-            Size = "";
-            LastModified = default;
-            CreationDate = default;
+            Size = 0;
+            LastModified = "";
+            CreationDate = "";
         }
     }
 }
