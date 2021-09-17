@@ -56,7 +56,7 @@ namespace Project_2
             this.label8 = new System.Windows.Forms.Label();
             this.adressBar = new System.Windows.Forms.TextBox();
             this.fileListBox = new System.Windows.Forms.ListBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.numberofOtherFilesTextBox = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.nametTextBox = new System.Windows.Forms.TextBox();
             this.docSubject = new System.Windows.Forms.TextBox();
@@ -329,12 +329,12 @@ namespace Project_2
             this.fileListBox.TabIndex = 65;
             this.fileListBox.SelectedIndexChanged += new System.EventHandler(this.fileListBox_SelectedIndexChanged);
             // 
-            // textBox1
+            // numberofOtherFilesTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(8, 427);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(47, 20);
-            this.textBox1.TabIndex = 67;
+            this.numberofOtherFilesTextBox.Location = new System.Drawing.Point(8, 427);
+            this.numberofOtherFilesTextBox.Name = "numberofOtherFilesTextBox";
+            this.numberofOtherFilesTextBox.Size = new System.Drawing.Size(47, 20);
+            this.numberofOtherFilesTextBox.TabIndex = 67;
             // 
             // label14
             // 
@@ -744,7 +744,7 @@ namespace Project_2
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.nametTextBox);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.numberofOtherFilesTextBox);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.fileListBox);
             this.Controls.Add(this.exportFilesButton);
@@ -773,9 +773,10 @@ namespace Project_2
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.adressBar);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "FILE EXPLORER";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -810,7 +811,7 @@ namespace Project_2
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox adressBar;
         private System.Windows.Forms.ListBox fileListBox;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox numberofOtherFilesTextBox;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox nametTextBox;
         private System.Windows.Forms.TextBox docSubject;

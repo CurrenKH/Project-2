@@ -32,6 +32,9 @@ namespace Project_2
         List<Image> imageList = new List<Image>();
         List<Document> documentList = new List<Document>();
 
+        //  Declare int variables as 0
+
+
         /// <summary>
         /// Builds form
         /// </summary>
@@ -46,8 +49,17 @@ namespace Project_2
         /// <param name="e"></param>
         private void fileSearchButton_Click(object sender, EventArgs e)
         {
+            //  Set integer values for file counters
+            int numAudio = 0;
+            int numImage = 0;
+            int numDocument = 0;
+            int numVideo = 0;
+            int numFiles = 0;
+            int numMedia = 0;
+            int numOther = 0;
+
             // Exception Handling
-            if(folderBrowserDialog1.ShowDialog() == DialogResult.OK)
+            if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
             {
                 string folderPath = folderBrowserDialog1.SelectedPath;
                 fileListBox.Items.Clear();
@@ -78,9 +90,9 @@ namespace Project_2
                             HRes = (int)img.HorizontalResolution,
                             VRes = (int)img.VerticalResolution
                         };
-
+                        numImage += 1;
                         FileList.Add(tempImage);
-                        imageList.Add(tempImage);
+                        // imageList.Add(tempImage);
                     }
                     // Collects documents by file extension
                     else if (file.Extension == ".pdf" || file.Extension == ".docx" || file.Extension == ".txt"
@@ -113,7 +125,7 @@ namespace Project_2
                             LastModified = file.LastWriteTime.ToString(),
                             Length = timeFile.Properties.Duration
                         };
-
+                        numVideo += 1;
                         FileList.Add(tempVideo);
                     }
                     // Collects audio by file extension
@@ -131,7 +143,7 @@ namespace Project_2
                             LastModified = file.LastWriteTime.ToString(),
                             Length = timeFile.Properties.Duration
                         };
-
+                        numAudio += 1;
                         FileList.Add(tempAudio);
                     }
                     else
@@ -144,17 +156,29 @@ namespace Project_2
                             CreationDate = file.CreationTime.ToString(),
                             LastModified = file.LastWriteTime.ToString()
                         };
-
+                        numOther += 1;
                         FileList.Add(tempFile);
                     }
                     // Adds file infromation to list box
                     fileListBox.Items.Add(file.Name + "\t" + "\t" + file.Extension + "\t" + "\t" + file.Length + "\t" + "\t" + file.LastWriteTime);
                 }
             }
+
+            //  Assign TextBoxes to file counters
+            numFiles = (numImage + numVideo + numDocument + numAudio + numOther);
+            numberOfImagesTextBox.Text = numImage.ToString();
+            numberOfVideoTextBox.Text = numVideo.ToString();
+            numberOfAudioTextBox.Text = numAudio.ToString();
+            numberOfDocumentsTextBox.Text = numDocument.ToString();
+            numberOfMediaTextBox.Text = numMedia.ToString();
+            numberofOtherFilesTextBox.Text = numOther.ToString();
+            totalNumberOfFilesTextBox.Text = numFiles.ToString();
         }
 
         private void fileListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+
             try
             {
                 if (fileListBox.SelectedIndex != -1)
@@ -162,6 +186,7 @@ namespace Project_2
                     int selected = fileListBox.SelectedIndex;
                     if (FileList[selected] is Image)
                     {
+                        //  Assigned TextBoxes to selected index in ListBox with respective properties
                         nametTextBox.Text = FileList[selected].Name;
                         extTextBox.Text = FileList[selected].Extension;
                         fileSize.Text = FileList[selected].Size.ToString();
@@ -169,7 +194,10 @@ namespace Project_2
                         modDate.Text = FileList[selected].LastModified;
                         userComment.Text = FileList[selected].UserComment;
 
-                        //imgWidth.Text = imageList[selected].Width.ToString();
+                        /*imgWidth.Text = imageList[selected].Width.ToString();
+                        imgHeight.Text = imageList[selected].Height.ToString();
+                        imgHRes.Text = imageList[selected].HRes.ToString();
+                        imgVRes.Text = imageList[selected].VRes.ToString();*/
                     }
                     else if (FileList[selected] is Video)
                     {
@@ -209,6 +237,11 @@ namespace Project_2
                 // Display an error message.
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }
