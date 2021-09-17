@@ -27,6 +27,11 @@ namespace Project_2
 
         List<GenericFile> FileList = new List<GenericFile>();
 
+        List<Audio> audioList = new List<Audio>();
+        List<Video> videoList = new List<Video>();
+        List<Image> imageList = new List<Image>();
+        List<Document> documentList = new List<Document>();
+
         /// <summary>
         /// Builds form
         /// </summary>
@@ -75,6 +80,7 @@ namespace Project_2
                         };
 
                         FileList.Add(tempImage);
+                        imageList.Add(tempImage);
                     }
                     // Collects documents by file extension
                     else if (file.Extension == ".pdf" || file.Extension == ".docx" || file.Extension == ".txt"
@@ -147,5 +153,62 @@ namespace Project_2
             }
         }
 
+        private void fileListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (fileListBox.SelectedIndex != -1)
+                {
+                    int selected = fileListBox.SelectedIndex;
+                    if (FileList[selected] is Image)
+                    {
+                        nametTextBox.Text = FileList[selected].Name;
+                        extTextBox.Text = FileList[selected].Extension;
+                        fileSize.Text = FileList[selected].Size.ToString();
+                        creationDate.Text = FileList[selected].CreationDate;
+                        modDate.Text = FileList[selected].LastModified;
+                        userComment.Text = FileList[selected].UserComment;
+
+                        //imgWidth.Text = imageList[selected].Width.ToString();
+                    }
+                    else if (FileList[selected] is Video)
+                    {
+                        nametTextBox.Text = FileList[selected].Name;
+                        extTextBox.Text = FileList[selected].Extension;
+                        fileSize.Text = FileList[selected].Size.ToString();
+                        creationDate.Text = FileList[selected].CreationDate;
+                        modDate.Text = FileList[selected].LastModified;
+                        userComment.Text = FileList[selected].UserComment;
+
+                    }
+                    else if (FileList[selected] is Audio)
+                    {
+                        nametTextBox.Text = FileList[selected].Name;
+                        extTextBox.Text = FileList[selected].Extension;
+                        fileSize.Text = FileList[selected].Size.ToString();
+                        creationDate.Text = FileList[selected].CreationDate;
+                        modDate.Text = FileList[selected].LastModified;
+                        userComment.Text = FileList[selected].UserComment;
+
+                    }
+                    else if (FileList[selected] is Document)
+                    {
+                        nametTextBox.Text = FileList[selected].Name;
+                        extTextBox.Text = FileList[selected].Extension;
+                        fileSize.Text = FileList[selected].Size.ToString();
+                        creationDate.Text = FileList[selected].CreationDate;
+                        modDate.Text = FileList[selected].LastModified;
+                        userComment.Text = FileList[selected].UserComment;
+
+                    }
+                }
+            }
+
+            catch (Exception ex)
+            {
+                // Display an error message.
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }
