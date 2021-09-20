@@ -91,7 +91,7 @@ namespace Project_2
                             VRes = (int)img.VerticalResolution
                         };
                         numImage += 1;
-                        //FileList.Add(tempFile);
+                        FileList.Add(tempFile);
                         imageList.Add(tempImage);
                     }
                     // Collects documents by file extension
@@ -106,8 +106,9 @@ namespace Project_2
                             CreationDate = file.CreationTime.ToString(),
                             LastModified = file.LastWriteTime.ToString(),
                         };
-
-                        FileList.Add(tempDocument);
+                        numDocument += 1;
+                        FileList.Add(tempFile);
+                        //documentList.Add(tempDocument);
                     }
                     // Collects video by file extension
                     else if (file.Extension == ".mp4" || file.Extension == ".avi" || file.Extension == ".mkv"
@@ -185,21 +186,30 @@ namespace Project_2
                 if (fileListBox.SelectedIndex != -1)
                 {
                     int selected = fileListBox.SelectedIndex;
-                    if (imageList[selected] is Image)
+                    /*if (FileList[selected] is Image)
                     {
                         //  Assigned TextBoxes to selected index in ListBox with respective properties
+                        nametTextBox.Text = FileList[selected].Name;
+                        extTextBox.Text = FileList[selected].Extension;
+                        fileSize.Text = FileList[selected].Size.ToString();
+                        creationDate.Text = FileList[selected].CreationDate;
+                        modDate.Text = FileList[selected].LastModified;
+                        userComment.Text = FileList[selected].UserComment;
+                    }*/
+                    if (imageList[selected] is Image)
+                    {
                         nametTextBox.Text = imageList[selected].Name;
                         extTextBox.Text = imageList[selected].Extension;
                         fileSize.Text = imageList[selected].Size.ToString();
                         creationDate.Text = imageList[selected].CreationDate;
                         modDate.Text = imageList[selected].LastModified;
                         userComment.Text = imageList[selected].UserComment;
-
                         //  Image properties from selected index show
                         imgWidth.Text = imageList[selected].Width.ToString();
                         imgHeight.Text = imageList[selected].Height.ToString();
                         imgHRes.Text = imageList[selected].HRes.ToString();
                         imgVRes.Text = imageList[selected].VRes.ToString();
+
                     }
                     else if (videoList[selected] is Video)
                     {
@@ -213,7 +223,7 @@ namespace Project_2
 
                         //videoDirector.Text = videoList[selected].Director;
                         //videoProducer.Text = videoList[selected].Producer;
-                        mediaLength.Text = videoList[selected].Length.ToString();
+                        //mediaLength.Text = videoList[selected].Length.ToString();
 
                     }
                     else if (FileList[selected] is Audio)
@@ -226,14 +236,14 @@ namespace Project_2
                         userComment.Text = FileList[selected].UserComment;
 
                     }
-                    else if (documentList[selected] is Document)
+                    else if (FileList[selected] is Document)
                     {
-                        nametTextBox.Text = documentList[selected].Name;
-                        extTextBox.Text = documentList[selected].Extension;
-                        fileSize.Text = documentList[selected].Size.ToString();
-                        creationDate.Text = documentList[selected].CreationDate;
-                        modDate.Text = documentList[selected].LastModified;
-                        userComment.Text = documentList[selected].UserComment;
+                        nametTextBox.Text = FileList[selected].Name;
+                        extTextBox.Text = FileList[selected].Extension;
+                        fileSize.Text = FileList[selected].Size.ToString();
+                        creationDate.Text = FileList[selected].CreationDate;
+                        modDate.Text = FileList[selected].LastModified;
+                        userComment.Text = FileList[selected].UserComment;
 
 
                     }
