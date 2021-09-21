@@ -186,21 +186,22 @@ namespace Project_2
             {
                 if (fileListBox.SelectedIndex != -1)
                 {
-                    int selected = fileListBox.SelectedIndex;
-                    if (FileList[selected] is Image)
+                    //int selected = fileListBox.SelectedIndex;
+                    if (FileList[fileListBox.SelectedIndex] is Image)
                     {
+                        Image SelectedImage = (Image)FileList[fileListBox.SelectedIndex];
                         //  Assigned TextBoxes to selected index in ListBox with respective properties
-                        nametTextBox.Text = FileList[selected].Name;
-                        extTextBox.Text = FileList[selected].Extension;
-                        fileSize.Text = FileList[selected].Size.ToString();
-                        creationDate.Text = FileList[selected].CreationDate;
-                        modDate.Text = FileList[selected].LastModified;
-                        userComment.Text = FileList[selected].UserComment;
+                        nametTextBox.Text = SelectedImage.Name;
+                        extTextBox.Text = SelectedImage.Extension;
+                        fileSize.Text = SelectedImage.Size.ToString();
+                        creationDate.Text = SelectedImage.CreationDate;
+                        modDate.Text = SelectedImage.LastModified;
+                        userComment.Text = SelectedImage.UserComment;
 
-                        imgWidth.Text = imageList[selected].Width.ToString();
-                        imgHeight.Text = imageList[selected].Height.ToString();
-                        imgHRes.Text = imageList[selected].HRes.ToString();
-                        imgVRes.Text = imageList[selected].VRes.ToString();
+                        imgWidth.Text = SelectedImage.Width.ToString();
+                        imgHeight.Text = SelectedImage.Height.ToString();
+                        imgHRes.Text = SelectedImage.HRes.ToString();
+                        imgVRes.Text = SelectedImage.VRes.ToString();
                     }
                     /*if (imageList[selected] is Image)
                     {
@@ -217,41 +218,44 @@ namespace Project_2
                         imgVRes.Text = imageList[selected].VRes.ToString();
 
                     }*/
-                    else if (FileList[selected] is Video)
+                    else if (FileList[fileListBox.SelectedIndex] is Video)
                     {
+                        Video SelectedVideo = (Video)FileList[fileListBox.SelectedIndex];
                         //  Video properties from selected index show
-                        nametTextBox.Text = FileList[selected].Name;
-                        extTextBox.Text = FileList[selected].Extension;
-                        fileSize.Text = FileList[selected].Size.ToString();
-                        creationDate.Text = FileList[selected].CreationDate;
-                        modDate.Text = FileList[selected].LastModified;
-                        userComment.Text = FileList[selected].UserComment;
+                        nametTextBox.Text = SelectedVideo.Name;
+                        extTextBox.Text = SelectedVideo.Extension;
+                        fileSize.Text = SelectedVideo.Size.ToString();
+                        creationDate.Text = SelectedVideo.CreationDate;
+                        modDate.Text = SelectedVideo.LastModified;
+                        userComment.Text = SelectedVideo.UserComment;
 
                         //videoDirector.Text = videoList[selected].Director;
                         //videoProducer.Text = videoList[selected].Producer;
-                        mediaLength.Text = videoList[selected].Length.ToString();
+                        mediaLength.Text = SelectedVideo.Length.ToString();
 
                     }
-                    else if (FileList[selected] is Audio)
+                    else if (FileList[fileListBox.SelectedIndex] is Audio)
                     {
-                        nametTextBox.Text = FileList[selected].Name;
-                        extTextBox.Text = FileList[selected].Extension;
-                        fileSize.Text = FileList[selected].Size.ToString();
-                        creationDate.Text = FileList[selected].CreationDate;
-                        modDate.Text = FileList[selected].LastModified;
-                        userComment.Text = FileList[selected].UserComment;
+                        Audio SelectedAudio = (Audio)FileList[fileListBox.SelectedIndex];
+                        nametTextBox.Text = SelectedAudio.Name;
+                        extTextBox.Text = SelectedAudio.Extension;
+                        fileSize.Text = SelectedAudio.Size.ToString();
+                        creationDate.Text = SelectedAudio.CreationDate;
+                        modDate.Text = SelectedAudio.LastModified;
+                        userComment.Text = SelectedAudio.UserComment;
 
-                        mediaLength.Text = audioList[selected].Length.ToString();
+                        mediaLength.Text = SelectedAudio.Length.ToString();
 
                     }
-                    else if (FileList[selected] is Document)
+                    else if (FileList[fileListBox.SelectedIndex] is Document)
                     {
-                        nametTextBox.Text = FileList[selected].Name;
-                        extTextBox.Text = FileList[selected].Extension;
-                        fileSize.Text = FileList[selected].Size.ToString();
-                        creationDate.Text = FileList[selected].CreationDate;
-                        modDate.Text = FileList[selected].LastModified;
-                        userComment.Text = FileList[selected].UserComment;
+                        Document SelectedDocument = (Document)FileList[fileListBox.SelectedIndex];
+                        nametTextBox.Text = SelectedDocument.Name;
+                        extTextBox.Text = SelectedDocument.Extension;
+                        fileSize.Text = SelectedDocument.Size.ToString();
+                        creationDate.Text = SelectedDocument.CreationDate;
+                        modDate.Text = SelectedDocument.LastModified;
+                        userComment.Text = SelectedDocument.UserComment;
                     }
                 }
             }
