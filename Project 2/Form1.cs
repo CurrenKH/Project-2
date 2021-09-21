@@ -91,7 +91,7 @@ namespace Project_2
                             VRes = (int)img.VerticalResolution
                         };
                         numImage += 1;
-                        FileList.Add(tempFile);
+                        FileList.Add(tempImage);
                         imageList.Add(tempImage);
                     }
                     // Collects documents by file extension
@@ -107,7 +107,7 @@ namespace Project_2
                             LastModified = file.LastWriteTime.ToString(),
                         };
                         numDocument += 1;
-                        FileList.Add(tempFile);
+                        FileList.Add(tempDocument);
                         //documentList.Add(tempDocument);
                     }
                     // Collects video by file extension
@@ -127,7 +127,7 @@ namespace Project_2
                             Length = timeFile.Properties.Duration
                         };
                         numVideo += 1;
-                        //FileList.Add(tempVideo);
+                        FileList.Add(tempVideo);
                         videoList.Add(tempVideo);
                     }
                     // Collects audio by file extension
@@ -147,6 +147,7 @@ namespace Project_2
                         };
                         numAudio += 1;
                         FileList.Add(tempAudio);
+                        audioList.Add(tempAudio);
                     }
                     else
                     {
@@ -186,7 +187,7 @@ namespace Project_2
                 if (fileListBox.SelectedIndex != -1)
                 {
                     int selected = fileListBox.SelectedIndex;
-                    /*if (FileList[selected] is Image)
+                    if (FileList[selected] is Image)
                     {
                         //  Assigned TextBoxes to selected index in ListBox with respective properties
                         nametTextBox.Text = FileList[selected].Name;
@@ -195,8 +196,13 @@ namespace Project_2
                         creationDate.Text = FileList[selected].CreationDate;
                         modDate.Text = FileList[selected].LastModified;
                         userComment.Text = FileList[selected].UserComment;
-                    }*/
-                    if (imageList[selected] is Image)
+
+                        imgWidth.Text = imageList[selected].Width.ToString();
+                        imgHeight.Text = imageList[selected].Height.ToString();
+                        imgHRes.Text = imageList[selected].HRes.ToString();
+                        imgVRes.Text = imageList[selected].VRes.ToString();
+                    }
+                    /*if (imageList[selected] is Image)
                     {
                         nametTextBox.Text = imageList[selected].Name;
                         extTextBox.Text = imageList[selected].Extension;
@@ -210,20 +216,20 @@ namespace Project_2
                         imgHRes.Text = imageList[selected].HRes.ToString();
                         imgVRes.Text = imageList[selected].VRes.ToString();
 
-                    }
-                    else if (videoList[selected] is Video)
+                    }*/
+                    else if (FileList[selected] is Video)
                     {
                         //  Video properties from selected index show
-                        nametTextBox.Text = videoList[selected].Name;
-                        extTextBox.Text = videoList[selected].Extension;
-                        fileSize.Text = videoList[selected].Size.ToString();
-                        creationDate.Text = videoList[selected].CreationDate;
-                        modDate.Text = videoList[selected].LastModified;
-                        userComment.Text = videoList[selected].UserComment;
+                        nametTextBox.Text = FileList[selected].Name;
+                        extTextBox.Text = FileList[selected].Extension;
+                        fileSize.Text = FileList[selected].Size.ToString();
+                        creationDate.Text = FileList[selected].CreationDate;
+                        modDate.Text = FileList[selected].LastModified;
+                        userComment.Text = FileList[selected].UserComment;
 
                         //videoDirector.Text = videoList[selected].Director;
                         //videoProducer.Text = videoList[selected].Producer;
-                        //mediaLength.Text = videoList[selected].Length.ToString();
+                        mediaLength.Text = videoList[selected].Length.ToString();
 
                     }
                     else if (FileList[selected] is Audio)
@@ -235,6 +241,8 @@ namespace Project_2
                         modDate.Text = FileList[selected].LastModified;
                         userComment.Text = FileList[selected].UserComment;
 
+                        mediaLength.Text = audioList[selected].Length.ToString();
+
                     }
                     else if (FileList[selected] is Document)
                     {
@@ -244,8 +252,6 @@ namespace Project_2
                         creationDate.Text = FileList[selected].CreationDate;
                         modDate.Text = FileList[selected].LastModified;
                         userComment.Text = FileList[selected].UserComment;
-
-
                     }
                 }
             }
