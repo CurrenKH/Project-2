@@ -269,17 +269,129 @@ namespace Project_2
         {
             
         }
+        private void UserCommentCheck()
+        {
+            if (userComment.Text == string.Empty)
+            {
+                MessageBox.Show("You must enter a comment.");
+            }
+        }
 
         private void SetButton_Click(object sender, EventArgs e)
         {
             if (fileListBox.SelectedIndex != -1)
             {
+
+                /*else if (numOfPages.Text == string.Empty)
+                {
+                    MessageBox.Show("You must enter a page amount.");
+                }*/
+
                 //int selected = fileListBox.SelectedIndex;
                 if (FileList[fileListBox.SelectedIndex] is Image)
                 {
                     Image newImage = (Image)FileList[fileListBox.SelectedIndex];
                     //  Assigned TextBoxes to selected index in ListBox with respective properties
-                    userComment.Text = newImage.UserComment;
+                    newImage.UserComment = userComment.Text;
+                    //  Check if the TextBoxes are empty
+
+                    UserCommentCheck();
+                }
+                else if (FileList[fileListBox.SelectedIndex] is Document)
+                {
+                    //  Method to check if comment TextBox is filled out
+                    UserCommentCheck();
+
+                    //  Check entry boxes
+                    if (numOfPages.Text == string.Empty)
+                    {
+                        MessageBox.Show("You must enter a page amount.");
+                    }
+                    if (numOfWords.Text == string.Empty)
+                    {
+                        MessageBox.Show("You must enter a word amount.");
+                    }
+                    if (docSubject.Text == string.Empty)
+                    {
+                        MessageBox.Show("You must enter a subject.");
+                    }
+                    else
+                    {
+                        Document newDocument = (Document)FileList[fileListBox.SelectedIndex];
+
+                        //  Assigned TextBoxes to selected index in ListBox with respective properties
+                        newDocument.UserComment = userComment.Text;
+                        newDocument.NumPages = int.Parse(numOfPages.Text);
+                        newDocument.NumWords = int.Parse(numOfWords.Text);
+                        newDocument.DocSubject = docSubject.Text;
+                    }
+                }
+                else if (FileList[fileListBox.SelectedIndex] is Video)
+                {
+                    //  Method to check if comment TextBox is filled out
+                    UserCommentCheck();
+
+                    //  Check entry boxes
+                    if (videoDirector.Text == string.Empty)
+                    {
+                        MessageBox.Show("You must enter a director.");
+                    }
+                    if (videoProducer.Text == string.Empty)
+                    {
+                        MessageBox.Show("You must enter a producer.");
+                    }
+                    if (mediaTitle.Text == string.Empty)
+                    {
+                        MessageBox.Show("You must enter a title.");
+                    }
+                    if (mediaRating.Text == string.Empty)
+                    {
+                        MessageBox.Show("You must enter a rating.");
+                    }
+                    else
+                    {
+                        Video newVideo = (Video)FileList[fileListBox.SelectedIndex];
+                        //  Assigned TextBoxes to selected index in ListBox with respective properties
+                        newVideo.UserComment = userComment.Text;
+                        newVideo.Director = videoDirector.Text;
+                        newVideo.Producer = videoProducer.Text;
+                        newVideo.Title = mediaTitle.Text;
+                        newVideo.Rating = int.Parse(mediaRating.Text);
+                    }
+
+                }
+                else if (FileList[fileListBox.SelectedIndex] is Audio)
+                {
+                    //  Method to check if comment TextBox is filled out
+                    UserCommentCheck();
+
+                    //  Check entry boxes
+                    if (audioArtist.Text == string.Empty)
+                    {
+                        MessageBox.Show("You must enter an artist.");
+                    }
+                    if (audioBitrate.Text == string.Empty)
+                    {
+                        MessageBox.Show("You must enter a bitrate value.");
+                    }
+                    if (mediaTitle.Text == string.Empty)
+                    {
+                        MessageBox.Show("You must enter a title.");
+                    }
+                    if (mediaRating.Text == string.Empty)
+                    {
+                        MessageBox.Show("You must enter a rating.");
+                    }
+                    else
+                    {
+                        Audio newAudio = (Audio)FileList[fileListBox.SelectedIndex];
+                        //  Assigned TextBoxes to selected index in ListBox with respective properties
+                        newAudio.UserComment = userComment.Text;
+                        newAudio.Artist = audioArtist.Text;
+                        newAudio.BitRate = int.Parse(audioBitrate.Text);
+                        newAudio.Title = mediaTitle.Text;
+                        newAudio.Rating = int.Parse(mediaRating.Text);
+                    }
                 }
             }
         }
