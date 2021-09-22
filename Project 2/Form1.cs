@@ -55,7 +55,6 @@ namespace Project_2
             int numDocument = 0;
             int numVideo = 0;
             int numFiles = 0;
-            int numMedia = 0;
             int numOther = 0;
 
             // Exception Handling
@@ -173,7 +172,6 @@ namespace Project_2
             numberOfVideoTextBox.Text = numVideo.ToString();
             numberOfAudioTextBox.Text = numAudio.ToString();
             numberOfDocumentsTextBox.Text = numDocument.ToString();
-            numberOfMediaTextBox.Text = numMedia.ToString();
             numberofOtherFilesTextBox.Text = numOther.ToString();
             totalNumberOfFilesTextBox.Text = numFiles.ToString();
         }
