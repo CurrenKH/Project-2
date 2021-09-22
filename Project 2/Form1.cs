@@ -269,5 +269,19 @@ namespace Project_2
         {
             
         }
+
+        private void SetButton_Click(object sender, EventArgs e)
+        {
+            if (fileListBox.SelectedIndex != -1)
+            {
+                //int selected = fileListBox.SelectedIndex;
+                if (FileList[fileListBox.SelectedIndex] is Image)
+                {
+                    Image newImage = (Image)FileList[fileListBox.SelectedIndex];
+                    //  Assigned TextBoxes to selected index in ListBox with respective properties
+                    userComment.Text = newImage.UserComment;
+                }
+            }
+        }
     }
 }

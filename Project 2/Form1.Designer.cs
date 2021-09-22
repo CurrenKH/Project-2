@@ -108,7 +108,7 @@ namespace Project_2
             // 
             this.exportFilesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exportFilesButton.Location = new System.Drawing.Point(883, 446);
-            this.exportFilesButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.exportFilesButton.Margin = new System.Windows.Forms.Padding(4);
             this.exportFilesButton.Name = "exportFilesButton";
             this.exportFilesButton.Size = new System.Drawing.Size(133, 112);
             this.exportFilesButton.TabIndex = 64;
@@ -130,7 +130,7 @@ namespace Project_2
             // typeSortButton
             // 
             this.typeSortButton.Location = new System.Drawing.Point(11, 108);
-            this.typeSortButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.typeSortButton.Margin = new System.Windows.Forms.Padding(4);
             this.typeSortButton.Name = "typeSortButton";
             this.typeSortButton.Size = new System.Drawing.Size(71, 28);
             this.typeSortButton.TabIndex = 61;
@@ -140,7 +140,7 @@ namespace Project_2
             // nameSortButton
             // 
             this.nameSortButton.Location = new System.Drawing.Point(11, 71);
-            this.nameSortButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nameSortButton.Margin = new System.Windows.Forms.Padding(4);
             this.nameSortButton.Name = "nameSortButton";
             this.nameSortButton.Size = new System.Drawing.Size(71, 28);
             this.nameSortButton.TabIndex = 60;
@@ -150,7 +150,7 @@ namespace Project_2
             // sizeSortButton
             // 
             this.sizeSortButton.Location = new System.Drawing.Point(11, 144);
-            this.sizeSortButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.sizeSortButton.Margin = new System.Windows.Forms.Padding(4);
             this.sizeSortButton.Name = "sizeSortButton";
             this.sizeSortButton.Size = new System.Drawing.Size(71, 28);
             this.sizeSortButton.TabIndex = 59;
@@ -160,7 +160,7 @@ namespace Project_2
             // modSortButton
             // 
             this.modSortButton.Location = new System.Drawing.Point(11, 180);
-            this.modSortButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.modSortButton.Margin = new System.Windows.Forms.Padding(4);
             this.modSortButton.Name = "modSortButton";
             this.modSortButton.Size = new System.Drawing.Size(71, 28);
             this.modSortButton.TabIndex = 58;
@@ -170,7 +170,7 @@ namespace Project_2
             // imgVRes
             // 
             this.imgVRes.Location = new System.Drawing.Point(593, 487);
-            this.imgVRes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.imgVRes.Margin = new System.Windows.Forms.Padding(4);
             this.imgVRes.Name = "imgVRes";
             this.imgVRes.ReadOnly = true;
             this.imgVRes.Size = new System.Drawing.Size(181, 22);
@@ -179,7 +179,7 @@ namespace Project_2
             // imgHRes
             // 
             this.imgHRes.Location = new System.Drawing.Point(593, 455);
-            this.imgHRes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.imgHRes.Margin = new System.Windows.Forms.Padding(4);
             this.imgHRes.Name = "imgHRes";
             this.imgHRes.ReadOnly = true;
             this.imgHRes.Size = new System.Drawing.Size(181, 22);
@@ -188,7 +188,7 @@ namespace Project_2
             // imgHeight
             // 
             this.imgHeight.Location = new System.Drawing.Point(593, 425);
-            this.imgHeight.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.imgHeight.Margin = new System.Windows.Forms.Padding(4);
             this.imgHeight.Name = "imgHeight";
             this.imgHeight.ReadOnly = true;
             this.imgHeight.Size = new System.Drawing.Size(181, 22);
@@ -197,7 +197,7 @@ namespace Project_2
             // imgWidth
             // 
             this.imgWidth.Location = new System.Drawing.Point(593, 395);
-            this.imgWidth.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.imgWidth.Margin = new System.Windows.Forms.Padding(4);
             this.imgWidth.Name = "imgWidth";
             this.imgWidth.ReadOnly = true;
             this.imgWidth.Size = new System.Drawing.Size(181, 22);
@@ -206,7 +206,7 @@ namespace Project_2
             // fileSearchButton
             // 
             this.fileSearchButton.Location = new System.Drawing.Point(799, 7);
-            this.fileSearchButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.fileSearchButton.Margin = new System.Windows.Forms.Padding(4);
             this.fileSearchButton.Name = "fileSearchButton";
             this.fileSearchButton.Size = new System.Drawing.Size(125, 33);
             this.fileSearchButton.TabIndex = 53;
@@ -217,7 +217,7 @@ namespace Project_2
             // numberOfVideoTextBox
             // 
             this.numberOfVideoTextBox.Location = new System.Drawing.Point(11, 431);
-            this.numberOfVideoTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numberOfVideoTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.numberOfVideoTextBox.Name = "numberOfVideoTextBox";
             this.numberOfVideoTextBox.ReadOnly = true;
             this.numberOfVideoTextBox.Size = new System.Drawing.Size(61, 22);
@@ -226,7 +226,7 @@ namespace Project_2
             // numberOfAudioTextBox
             // 
             this.numberOfAudioTextBox.Location = new System.Drawing.Point(11, 384);
-            this.numberOfAudioTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numberOfAudioTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.numberOfAudioTextBox.Name = "numberOfAudioTextBox";
             this.numberOfAudioTextBox.ReadOnly = true;
             this.numberOfAudioTextBox.Size = new System.Drawing.Size(61, 22);
@@ -235,7 +235,7 @@ namespace Project_2
             // numberOfDocumentsTextBox
             // 
             this.numberOfDocumentsTextBox.Location = new System.Drawing.Point(11, 337);
-            this.numberOfDocumentsTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numberOfDocumentsTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.numberOfDocumentsTextBox.Name = "numberOfDocumentsTextBox";
             this.numberOfDocumentsTextBox.ReadOnly = true;
             this.numberOfDocumentsTextBox.Size = new System.Drawing.Size(61, 22);
@@ -244,7 +244,7 @@ namespace Project_2
             // numberOfImagesTextBox
             // 
             this.numberOfImagesTextBox.Location = new System.Drawing.Point(11, 290);
-            this.numberOfImagesTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numberOfImagesTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.numberOfImagesTextBox.Name = "numberOfImagesTextBox";
             this.numberOfImagesTextBox.ReadOnly = true;
             this.numberOfImagesTextBox.Size = new System.Drawing.Size(61, 22);
@@ -253,7 +253,7 @@ namespace Project_2
             // totalNumberOfFilesTextBox
             // 
             this.totalNumberOfFilesTextBox.Location = new System.Drawing.Point(11, 242);
-            this.totalNumberOfFilesTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.totalNumberOfFilesTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.totalNumberOfFilesTextBox.Name = "totalNumberOfFilesTextBox";
             this.totalNumberOfFilesTextBox.ReadOnly = true;
             this.totalNumberOfFilesTextBox.Size = new System.Drawing.Size(61, 22);
@@ -332,7 +332,7 @@ namespace Project_2
             // adressBar
             // 
             this.adressBar.Location = new System.Drawing.Point(91, 14);
-            this.adressBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.adressBar.Margin = new System.Windows.Forms.Padding(4);
             this.adressBar.Name = "adressBar";
             this.adressBar.ReadOnly = true;
             this.adressBar.Size = new System.Drawing.Size(701, 22);
@@ -343,7 +343,7 @@ namespace Project_2
             this.fileListBox.FormattingEnabled = true;
             this.fileListBox.ItemHeight = 16;
             this.fileListBox.Location = new System.Drawing.Point(132, 46);
-            this.fileListBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.fileListBox.Margin = new System.Windows.Forms.Padding(4);
             this.fileListBox.Name = "fileListBox";
             this.fileListBox.ScrollAlwaysVisible = true;
             this.fileListBox.Size = new System.Drawing.Size(344, 564);
@@ -353,7 +353,7 @@ namespace Project_2
             // numberofOtherFilesTextBox
             // 
             this.numberofOtherFilesTextBox.Location = new System.Drawing.Point(11, 481);
-            this.numberofOtherFilesTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numberofOtherFilesTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.numberofOtherFilesTextBox.Name = "numberofOtherFilesTextBox";
             this.numberofOtherFilesTextBox.ReadOnly = true;
             this.numberofOtherFilesTextBox.Size = new System.Drawing.Size(61, 22);
@@ -372,7 +372,7 @@ namespace Project_2
             // nametTextBox
             // 
             this.nametTextBox.Location = new System.Drawing.Point(593, 70);
-            this.nametTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nametTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.nametTextBox.Name = "nametTextBox";
             this.nametTextBox.ReadOnly = true;
             this.nametTextBox.Size = new System.Drawing.Size(181, 22);
@@ -381,7 +381,7 @@ namespace Project_2
             // docSubject
             // 
             this.docSubject.Location = new System.Drawing.Point(593, 335);
-            this.docSubject.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.docSubject.Margin = new System.Windows.Forms.Padding(4);
             this.docSubject.Name = "docSubject";
             this.docSubject.Size = new System.Drawing.Size(181, 22);
             this.docSubject.TabIndex = 74;
@@ -389,7 +389,7 @@ namespace Project_2
             // numOfWords
             // 
             this.numOfWords.Location = new System.Drawing.Point(593, 305);
-            this.numOfWords.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numOfWords.Margin = new System.Windows.Forms.Padding(4);
             this.numOfWords.Name = "numOfWords";
             this.numOfWords.Size = new System.Drawing.Size(181, 22);
             this.numOfWords.TabIndex = 73;
@@ -397,7 +397,7 @@ namespace Project_2
             // numOfPages
             // 
             this.numOfPages.Location = new System.Drawing.Point(593, 274);
-            this.numOfPages.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numOfPages.Margin = new System.Windows.Forms.Padding(4);
             this.numOfPages.Name = "numOfPages";
             this.numOfPages.Size = new System.Drawing.Size(181, 22);
             this.numOfPages.TabIndex = 72;
@@ -470,7 +470,7 @@ namespace Project_2
             // modDate
             // 
             this.modDate.Location = new System.Drawing.Point(593, 192);
-            this.modDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.modDate.Margin = new System.Windows.Forms.Padding(4);
             this.modDate.Name = "modDate";
             this.modDate.ReadOnly = true;
             this.modDate.Size = new System.Drawing.Size(181, 22);
@@ -479,7 +479,7 @@ namespace Project_2
             // creationDate
             // 
             this.creationDate.Location = new System.Drawing.Point(593, 162);
-            this.creationDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.creationDate.Margin = new System.Windows.Forms.Padding(4);
             this.creationDate.Name = "creationDate";
             this.creationDate.ReadOnly = true;
             this.creationDate.Size = new System.Drawing.Size(181, 22);
@@ -488,7 +488,7 @@ namespace Project_2
             // fileSize
             // 
             this.fileSize.Location = new System.Drawing.Point(593, 132);
-            this.fileSize.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.fileSize.Margin = new System.Windows.Forms.Padding(4);
             this.fileSize.Name = "fileSize";
             this.fileSize.ReadOnly = true;
             this.fileSize.Size = new System.Drawing.Size(181, 22);
@@ -497,7 +497,7 @@ namespace Project_2
             // userComment
             // 
             this.userComment.Location = new System.Drawing.Point(593, 222);
-            this.userComment.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.userComment.Margin = new System.Windows.Forms.Padding(4);
             this.userComment.Name = "userComment";
             this.userComment.Size = new System.Drawing.Size(181, 22);
             this.userComment.TabIndex = 84;
@@ -516,7 +516,7 @@ namespace Project_2
             // mediaRating
             // 
             this.mediaRating.Location = new System.Drawing.Point(593, 608);
-            this.mediaRating.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mediaRating.Margin = new System.Windows.Forms.Padding(4);
             this.mediaRating.Name = "mediaRating";
             this.mediaRating.Size = new System.Drawing.Size(181, 22);
             this.mediaRating.TabIndex = 91;
@@ -524,7 +524,7 @@ namespace Project_2
             // mediaLength
             // 
             this.mediaLength.Location = new System.Drawing.Point(593, 576);
-            this.mediaLength.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mediaLength.Margin = new System.Windows.Forms.Padding(4);
             this.mediaLength.Name = "mediaLength";
             this.mediaLength.ReadOnly = true;
             this.mediaLength.Size = new System.Drawing.Size(181, 22);
@@ -533,7 +533,7 @@ namespace Project_2
             // mediaTitle
             // 
             this.mediaTitle.Location = new System.Drawing.Point(593, 546);
-            this.mediaTitle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mediaTitle.Margin = new System.Windows.Forms.Padding(4);
             this.mediaTitle.Name = "mediaTitle";
             this.mediaTitle.Size = new System.Drawing.Size(181, 22);
             this.mediaTitle.TabIndex = 89;
@@ -541,7 +541,7 @@ namespace Project_2
             // videoProducer
             // 
             this.videoProducer.Location = new System.Drawing.Point(861, 102);
-            this.videoProducer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.videoProducer.Margin = new System.Windows.Forms.Padding(4);
             this.videoProducer.Name = "videoProducer";
             this.videoProducer.Size = new System.Drawing.Size(181, 22);
             this.videoProducer.TabIndex = 93;
@@ -549,7 +549,7 @@ namespace Project_2
             // videoDirector
             // 
             this.videoDirector.Location = new System.Drawing.Point(861, 71);
-            this.videoDirector.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.videoDirector.Margin = new System.Windows.Forms.Padding(4);
             this.videoDirector.Name = "videoDirector";
             this.videoDirector.Size = new System.Drawing.Size(181, 22);
             this.videoDirector.TabIndex = 92;
@@ -557,7 +557,7 @@ namespace Project_2
             // audioBitrate
             // 
             this.audioBitrate.Location = new System.Drawing.Point(861, 192);
-            this.audioBitrate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.audioBitrate.Margin = new System.Windows.Forms.Padding(4);
             this.audioBitrate.Name = "audioBitrate";
             this.audioBitrate.Size = new System.Drawing.Size(181, 22);
             this.audioBitrate.TabIndex = 95;
@@ -565,7 +565,7 @@ namespace Project_2
             // audioArtist
             // 
             this.audioArtist.Location = new System.Drawing.Point(861, 162);
-            this.audioArtist.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.audioArtist.Margin = new System.Windows.Forms.Padding(4);
             this.audioArtist.Name = "audioArtist";
             this.audioArtist.Size = new System.Drawing.Size(181, 22);
             this.audioArtist.TabIndex = 94;
@@ -763,7 +763,7 @@ namespace Project_2
             // extTextBox
             // 
             this.extTextBox.Location = new System.Drawing.Point(593, 102);
-            this.extTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.extTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.extTextBox.Name = "extTextBox";
             this.extTextBox.ReadOnly = true;
             this.extTextBox.Size = new System.Drawing.Size(181, 22);
@@ -777,6 +777,7 @@ namespace Project_2
             this.setButton.TabIndex = 116;
             this.setButton.Text = "SET";
             this.setButton.UseVisualStyleBackColor = true;
+            this.setButton.Click += new System.EventHandler(this.SetButton_Click);
             // 
             // modifyButton
             // 
