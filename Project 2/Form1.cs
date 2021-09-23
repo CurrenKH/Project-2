@@ -395,5 +395,54 @@ namespace Project_2
                 }
             }
         }
+
+        private void DeleteButton_Click(object sender, EventArgs e)
+        {
+            if (fileListBox.SelectedIndex != -1)
+            {
+                //int selected = fileListBox.SelectedIndex;
+                if (FileList[fileListBox.SelectedIndex] is Image)
+                {
+                    Image newImage = (Image)FileList[fileListBox.SelectedIndex];
+                    //  Assigned TextBoxes to selected index in ListBox with respective properties
+                    newImage.UserComment = "";
+                }
+                else if (FileList[fileListBox.SelectedIndex] is Document)
+                {
+                    Document newDocument = (Document)FileList[fileListBox.SelectedIndex];
+                    //  Assigned TextBoxes to selected index in ListBox with respective properties
+                    newDocument.UserComment = "";
+                    newDocument.NumPages = 0;
+                    newDocument.NumWords = 0;
+                    newDocument.DocSubject = "";
+                }
+                else if (FileList[fileListBox.SelectedIndex] is Video)
+                {
+                    Video newVideo = (Video)FileList[fileListBox.SelectedIndex];
+                    //  Assigned TextBoxes to selected index in ListBox with respective properties
+                    newVideo.UserComment = "";
+                    newVideo.Director = "";
+                    newVideo.Producer = "";
+                    newVideo.Title = "";
+                    newVideo.Rating = 0;
+                }
+                else if (FileList[fileListBox.SelectedIndex] is Audio)
+                {
+                    Audio newAudio = (Audio)FileList[fileListBox.SelectedIndex];
+                    //  Assigned TextBoxes to selected index in ListBox with respective properties
+                    newAudio.UserComment = "";
+                    newAudio.Artist = "";
+                    newAudio.BitRate = 0;
+                    newAudio.Title = "";
+                    newAudio.Rating = 0;
+                }
+            }
+        }
+
+        private void NameSortButton_Click(object sender, EventArgs e)
+        {
+            //  Sort alphabetically
+            fileListBox.Sorted = true;
+        }
     }
 }

@@ -146,6 +146,7 @@ namespace Project_2
             this.nameSortButton.TabIndex = 60;
             this.nameSortButton.Text = "NAME";
             this.nameSortButton.UseVisualStyleBackColor = true;
+            this.nameSortButton.Click += new System.EventHandler(this.NameSortButton_Click);
             // 
             // sizeSortButton
             // 
@@ -796,6 +797,7 @@ namespace Project_2
             this.deleteButton.TabIndex = 118;
             this.deleteButton.Text = "DELETE";
             this.deleteButton.UseVisualStyleBackColor = true;
+            this.deleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
             // 
             // Form1
             // 
